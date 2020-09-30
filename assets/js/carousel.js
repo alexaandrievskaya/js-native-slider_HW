@@ -149,6 +149,8 @@ class Carousel {
 
 
     init () {
+        this.indContainer.style.display = 'flex';
+        document.querySelector('.controls').style.display = 'block';
         this._initProps();
         this._initControls();
         this._initIndicators();
