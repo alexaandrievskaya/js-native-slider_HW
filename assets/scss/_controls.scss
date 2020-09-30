@@ -1,0 +1,78 @@
+.controls {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.control {
+  &-pause {
+    @include controls-pos;
+
+    top: calc(50% - 20vh);
+    left: calc(50% - 20vh);
+    height: 40vh;
+    padding: 0;
+    transition: opacity 0.25s ease-out;
+    opacity: 0;
+
+    @include lg-min {
+      cursor: pointer;
+    }
+
+    &:hover,
+    &:focus {
+      transition: opacity 1s ease-in 0.5s;
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &-prev {
+    @include controls-pos;
+
+    left: 0;
+    width: 10%;
+
+    @include lg-min {
+      cursor: pointer;
+    }
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+      text-shadow: 0 0 10px #ffffff;
+    }
+  }
+
+  &-next {
+    @include controls-pos;
+
+    right: 0;
+    width: 10%;
+
+    @include lg-min {
+      cursor: pointer;
+    }
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+      text-shadow: 0 0 10px #ffffff;
+    }
+  }
+}
+
+.fa-angle-left,
+.fa-angle-right {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 40px;
+}
+
+.fa-play-circle,
+.fa-pause-circle {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 40vh;
+}
+
+
