@@ -13,6 +13,7 @@
 <body>
 
 <div id="carousel" class="carousel">
+
     <div id="slides-container" class="slides">
         <div class="slide active" style="background-image: url(assets/img/dubaj.jpg)"></div>
         <div class="slide" style="background-image: url(assets/img/london.jpg)"></div>
@@ -20,9 +21,26 @@
         <div class="slide" style="background-image: url(assets/img/praga.jpg)"></div>
         <div class="slide" style="background-image: url(assets/img/sydney.jpg)"></div>
     </div>
+
+    <div class="controls" id="controls-container">
+        <span id="pause-btn" class="control-pause"><i class="far fa-play-circle"></i></span>;
+        <span id="prev-btn" class="control-prev"><i class="fas fa-angle-left"></i></span>;
+        <span id="next-btn" class="control-next"><i class="fas fa-angle-right"></i></span>;
+    </div>
+
+    <div class="indicators" id="indicators-container">
+        <div class="indicator active" data-slide-to="0"></div>
+        <div class="indicator" data-slide-to="1"></div>
+        <div class="indicator" data-slide-to="2"></div>
+        <div class="indicator" data-slide-to="3"></div>
+        <div class="indicator" data-slide-to="4"></div>
+    </div>
 </div>
 
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--<script src='libs/jquery/dist/jquery.min.js'></script>-->
 <!--<script src="assets/js/carousel.js"></script>-->
 <!--<script src="assets/js/main.js"></script>-->
 <script src="assets/js/slider-on-jquery.js"></script>
